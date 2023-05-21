@@ -1,4 +1,13 @@
+using WebApp6.Services.HistoryService;
+using WebApp6.Services.ManufacturerService;
+using WebApp6.Services.ProductService;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddSingleton<IProductService, ProductService>(); // Add singleton to save data state between requests
+builder.Services.AddSingleton<ICategoryService, CategoryService>();
+builder.Services.AddSingleton<IManufacturerService, ManufacturerService>();
 
 // Add services to the container.
 builder.Services.AddControllers();
