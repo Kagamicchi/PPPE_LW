@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApp6.Models;
 using WebApp6.Models.Dto;
 using WebApp6.Models.Dto.History;
@@ -8,6 +9,7 @@ namespace WebApp6.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
@@ -17,6 +19,7 @@ namespace WebApp6.Controllers
             _categoryService = categoryService;
         }
 
+        // GET: api/Category/7
         [HttpGet("{id}")]
         public async Task<ActionResult<BaseResponse<CategoryModel>>> Get(Guid id)
         {
@@ -29,12 +32,14 @@ namespace WebApp6.Controllers
             return Ok(category);
         }
 
+        // GET: api/Category
         [HttpGet]
         public async Task<ActionResult<BaseResponse<CategoryModel>>> GetAll()
         {
             return Ok(await _categoryService.GetAll());
         }
 
+        // POST: api/Category
         [HttpPost]
         public async Task<ActionResult<BaseResponse<CategoryModel>>> Post([FromBody] CategoryRequest request)
         {
@@ -42,6 +47,7 @@ namespace WebApp6.Controllers
             return Ok(category);
         }
 
+        // PUT: api/Category/7
         [HttpPut("{id}")]
         public async Task<ActionResult<BaseResponse<CategoryModel>>> Put(Guid id, [FromBody] CategoryModel category)
         {
@@ -55,6 +61,7 @@ namespace WebApp6.Controllers
             return Ok(response);
         }
 
+        // DELETE: api/Category/7
         [HttpDelete("{id}")]
         public async Task<ActionResult<BaseResponse<CategoryModel>>> Delete(Guid id)
         {

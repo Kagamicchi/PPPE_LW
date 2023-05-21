@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApp6.Models;
 using WebApp6.Models.Dto;
 using WebApp6.Models.Dto.Product;
@@ -8,6 +9,7 @@ namespace WebApp6.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -17,6 +19,7 @@ namespace WebApp6.Controllers
             _productService = productService;
         }
 
+        // GET: api/Product/2
         [HttpGet("{id}")]
         public async Task<ActionResult<BaseResponse<ProductModel>>> Get(Guid id)
         {
@@ -29,6 +32,7 @@ namespace WebApp6.Controllers
             return Ok(product);
         }
 
+        // GET: api/Product
         [HttpGet]
         public async Task<ActionResult<BaseResponse<ProductModel>>> GetAll()
         {
@@ -36,6 +40,7 @@ namespace WebApp6.Controllers
             return Ok(products);
         }
 
+        // POST: api/Product
         [HttpPost]
         public async Task<ActionResult<BaseResponse<ProductModel>>> Post([FromBody] ProductRequest request)
         {
@@ -43,6 +48,7 @@ namespace WebApp6.Controllers
             return Ok(product);
         }
 
+        // PUT: api/Product/2
         [HttpPut("{id}")]
         public async Task<ActionResult<BaseResponse<ProductModel>>> Put(Guid id, [FromBody] ProductModel product)
         {
@@ -56,6 +62,7 @@ namespace WebApp6.Controllers
             return Ok(response);
         }
 
+        // DELETE: api/Product/2
         [HttpDelete("{id}")]
         public async Task<ActionResult<BaseResponse<ProductModel>>> Delete(Guid id)
         {

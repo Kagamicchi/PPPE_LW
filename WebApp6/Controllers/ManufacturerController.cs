@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApp6.Models;
 using WebApp6.Models.Dto;
 using WebApp6.Models.Dto.Manufacturer;
@@ -8,6 +9,7 @@ namespace WebApp6.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ManufacturerController : ControllerBase
     {
         private readonly IManufacturerService _manufacturerService;
@@ -17,6 +19,7 @@ namespace WebApp6.Controllers
             _manufacturerService = manufacturerService;
         }
 
+        // GET: api/Manufacturer/5
         [HttpGet("{id}")]
         public async Task<ActionResult<BaseResponse<ManufacturerModel>>> Get(Guid id)
         {
@@ -29,12 +32,14 @@ namespace WebApp6.Controllers
             return Ok(manufacturer);
         }
 
+        // GET: api/Manufacturer
         [HttpGet]
         public async Task<ActionResult<BaseResponse<ManufacturerModel>>> GetAll()
         {
             return Ok(await _manufacturerService.GetAll());
         }
 
+        // POST: api/Manufacturer
         [HttpPost]
         public async Task<ActionResult<BaseResponse<ManufacturerModel>>> Post([FromBody] ManufacturerRequest request)
         {
@@ -42,6 +47,7 @@ namespace WebApp6.Controllers
             return Ok(manufacturer);
         }
 
+        // PUT: api/Manufacturer/5
         [HttpPut("{id}")]
         public async Task<ActionResult<BaseResponse<ManufacturerModel>>> Put(Guid id, [FromBody] ManufacturerModel manufacturer)
         {
@@ -55,6 +61,7 @@ namespace WebApp6.Controllers
             return Ok(response);
         }
 
+        // DELETE: api/Manufacturer/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<BaseResponse<ManufacturerModel>>> Delete(Guid id)
         {

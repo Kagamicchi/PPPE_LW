@@ -35,3 +35,10 @@ G:\универ\3_курс\ПППИ\WebApp6\WebApp6\obj\Debug\net7.0\refint\WebA
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\obj\Debug\net7.0\WebApp6.pdb
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\obj\Debug\net7.0\WebApp6.genruntimeconfig.cache
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\obj\Debug\net7.0\ref\WebApp6.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
