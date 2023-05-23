@@ -67,7 +67,7 @@ namespace WebApp6.Services.AuthService
             {
                 var failResponse = new BaseResponse<AuthResponse>
                 {
-                    Message = "Authentication failed",
+                    Message = "Authentication failed!",
                     ValueCount = 1,
                     Values = new List<AuthResponse> { new AuthResponse() { Message = "Authentication failed" } }
                 };
@@ -128,7 +128,7 @@ namespace WebApp6.Services.AuthService
                 {
                     return new BaseResponse<UserResponse>()
                     {
-                        Message = "The email address is already in use",
+                        Message = "The email address is already in use!",
                         StatusCode = StatusCodes.Status409Conflict,
                     };
                 }

@@ -42,3 +42,11 @@ G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.I
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\ClosedXML.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\ExcelNumberFormat.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Irony.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\SixLabors.Fonts.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\System.IO.Packaging.dll
+G:\универ\3_курс\ПППИ\WebApp6\WebApp6\bin\Debug\net7.0\XLParser.dll
